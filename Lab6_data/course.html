@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- Thiết kế bởi Phạm Trương Hồng Ngân -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thiên Văn Việt Nam</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <video loop autoplay muted id="bg-video">
+      <source src="video/gfp-astro-timelapse.mp4" type="video/mp4" />
+    </video>
+
+    <header class="container">
+      <span id="language">
+        <a onclick="changeLang('en-US')" href="#">
+          <img src="images/us.png" alt="" />
+        </a>
+        <a onclick="changeLang('vi-VN')" href="#">
+          <img src="images/vn.png" alt="" />
+        </a>
+      </span>
+      <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img id="logo" src="./images/logo.png" alt="" />
+            <h5>ASTRONOMIA</h5>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active multilang"
+                  id="MENU_HOME"
+                  aria-current="page"
+                  href="index.html"
+                  >Trang Chủ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link multilang" id="MENU_ABOUT_US" href="#"
+                  >Giới thiệu</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link multilang"
+                  id="MENU_COURSES"
+                  href="course.html"
+                  >Các Khóa Học</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link multilang" id="MENU_CONTACT"
+                  >Liên Hệ</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="row">
+        <table
+          data-toggle="table"
+          data-mobile-responsive="true"
+          data-check-on-init="true"
+          class="table table-striped table-light table-hover"
+        >
+          <thead>
+            <tr>
+              <th><span id="COURSES_CODE" class="multilang"></span></th>
+              <th><span id="COURSES_NAME" class="multilang"></span></th>
+              <th><span id="COURSES_STARTDATE" class="multilang"></span></th>
+              <th><span id="COURSES_ENDDATE" class="multilang"></span></th>
+              <th><span id="COURSES_FEE" class="multilang"></span></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="course_list"></tbody>
+        </table>
+      </div>
+    </main>
+    <footer class="container"></footer>
+
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/extensions/mobile/bootstrap-table-mobile.js"></script>
+    <script src="js/labels_js.js"></script>
+    <script src="js/courselist.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
